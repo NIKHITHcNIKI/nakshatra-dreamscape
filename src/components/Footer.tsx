@@ -14,32 +14,64 @@ export function Footer() {
             </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            A luxury sanctuary where the stars meet the forest. Escape the ordinary, awaken the extraordinary.
+            A luxury sanctuary where the stars meet the forest. Escape the ordinary, awaken the
+            extraordinary.
           </p>
         </div>
 
         <div>
           <h4 className="eyebrow mb-5">Explore</h4>
           <ul className="space-y-3 text-sm text-foreground/70">
-            <li><a href="#about" className="hover:text-gold transition">About</a></li>
-            <li><a href="#spa" className="hover:text-gold transition">Spa & Activities</a></li>
-            <li><a href="#gallery" className="hover:text-gold transition">Gallery</a></li>
-            <li><a href="#contact" className="hover:text-gold transition">Contact</a></li>
+            <li>
+              <a href="#about" className="hover:text-gold transition">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#spa" className="hover:text-gold transition">
+                Spa & Activities
+              </a>
+            </li>
+            <li>
+              <a href="#gallery" className="hover:text-gold transition">
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-gold transition">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         <div>
           <h4 className="eyebrow mb-5">Reach Us</h4>
           <ul className="space-y-3 text-sm text-foreground/70">
-            <li className="flex gap-2 items-start"><MapPin size={14} className="text-gold mt-1" /><span>Hidden Valley Road,<br />Western Ghats, India</span></li>
-            <li className="flex gap-2 items-center"><Phone size={14} className="text-gold" /><span>+91 90000 00000</span></li>
-            <li className="flex gap-2 items-center"><Mail size={14} className="text-gold" /><span>stay@nakshatraretreat.com</span></li>
+            <li className="flex gap-2 items-start">
+              <MapPin size={14} className="text-gold mt-1" />
+              <span>
+                Hidden Valley Road,
+                <br />
+                Western Ghats, India
+              </span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <Phone size={14} className="text-gold" />
+              <span>+91 90000 00000</span>
+            </li>
+            <li className="flex gap-2 items-center">
+              <Mail size={14} className="text-gold" />
+              <span>stay@nakshatraretreat.com</span>
+            </li>
           </ul>
         </div>
 
         <div>
           <h4 className="eyebrow mb-5">Newsletter</h4>
-          <p className="text-sm text-muted-foreground mb-4">Receive exclusive offers and seasonal stories.</p>
+          <p className="text-sm text-muted-foreground mb-4">
+            Receive exclusive offers and seasonal stories.
+          </p>
           <form className="flex gap-2">
             <input
               type="email"
@@ -49,9 +81,15 @@ export function Footer() {
             <button className="btn-gold !px-5 !py-2">→</button>
           </form>
           <div className="flex gap-4 mt-6 text-foreground/60">
-            <a href="#" className="hover:text-gold transition"><Instagram size={18} /></a>
-            <a href="#" className="hover:text-gold transition"><Facebook size={18} /></a>
-            <a href="#" className="hover:text-gold transition"><Youtube size={18} /></a>
+            <a href="#" className="hover:text-gold transition">
+              <Instagram size={18} />
+            </a>
+            <a href="#" className="hover:text-gold transition">
+              <Facebook size={18} />
+            </a>
+            <a href="#" className="hover:text-gold transition">
+              <Youtube size={18} />
+            </a>
           </div>
         </div>
       </div>

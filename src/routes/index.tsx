@@ -3,9 +3,22 @@ import { motion } from "framer-motion";
 import { Reveal, Particles } from "@/components/Effects";
 import { useState } from "react";
 import {
-  Star, MapPin, Sparkles, Leaf, Wind, Sun, ArrowRight, Quote,
-  Flame, Waves, Mountain, Heart, Bike,
-  Mail, Phone, MessageCircle,
+  Star,
+  MapPin,
+  Sparkles,
+  Leaf,
+  Wind,
+  Sun,
+  ArrowRight,
+  Quote,
+  Flame,
+  Waves,
+  Mountain,
+  Heart,
+  Bike,
+  Mail,
+  Phone,
+  MessageCircle,
 } from "lucide-react";
 import hero from "@/assets/resort-front.webp";
 import nature from "@/assets/resort-aerial.webp";
@@ -32,7 +45,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Nakshatra Retreat — Luxury Forest Resort & Wellness Sanctuary" },
-      { name: "description", content: "Escape into nature at Nakshatra Retreat. Cinematic villas, fine dining, holistic spa, and unforgettable experiences beneath a canopy of stars." },
+      {
+        name: "description",
+        content:
+          "Escape into nature at Nakshatra Retreat. Cinematic villas, fine dining, holistic spa, and unforgettable experiences beneath a canopy of stars.",
+      },
       { property: "og:title", content: "Nakshatra Retreat — Luxury Forest Resort" },
       { property: "og:description", content: "A 5-star nature sanctuary in the Western Ghats." },
     ],
@@ -41,11 +58,31 @@ export const Route = createFileRoute("/")({
 });
 
 const attractions = [
-  { y: "10 km", t: "Kanakapura Fort", d: "A historical site offering panoramic views and a glimpse into the region's heritage." },
-  { y: "20 km", t: "Art of Living International Center", d: "A serene place for spiritual retreats and yoga programs." },
-  { y: "30 km", t: "Ramanagara Hills (Ramadevara Betta)", d: "A popular destination for trekking and rock climbing." },
-  { y: "35 km", t: "Wonderla Amusement Park", d: "An entertainment park featuring thrilling rides and family-friendly attractions." },
-  { y: "50 km", t: "Mekedatu", d: "A scenic picnic spot where the Kaveri River flows through a gorge, surrounded by lush greenery." },
+  {
+    y: "10 km",
+    t: "Kanakapura Fort",
+    d: "A historical site offering panoramic views and a glimpse into the region's heritage.",
+  },
+  {
+    y: "20 km",
+    t: "Art of Living International Center",
+    d: "A serene place for spiritual retreats and yoga programs.",
+  },
+  {
+    y: "30 km",
+    t: "Ramanagara Hills (Ramadevara Betta)",
+    d: "A popular destination for trekking and rock climbing.",
+  },
+  {
+    y: "35 km",
+    t: "Wonderla Amusement Park",
+    d: "An entertainment park featuring thrilling rides and family-friendly attractions.",
+  },
+  {
+    y: "50 km",
+    t: "Mekedatu",
+    d: "A scenic picnic spot where the Kaveri River flows through a gorge, surrounded by lush greenery.",
+  },
 ];
 
 const activities = [
@@ -89,29 +126,63 @@ function Home() {
       {/* HERO */}
       <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Nakshatra Retreat luxury forest villa at golden hour" className="w-full h-full object-cover animate-slow-zoom" />
+          <img
+            src={hero}
+            alt="Nakshatra Retreat luxury forest villa at golden hour"
+            className="w-full h-full object-cover animate-slow-zoom"
+          />
           <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
           <div className="absolute inset-0 bg-[oklch(0.10_0.02_150)]/40" />
         </div>
         <Particles count={30} />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.3 }} className="eyebrow mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="eyebrow mb-8"
+          >
             ✦ A Luxury Nature Retreat ✦
           </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.4, delay: 0.5 }} className="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.95] font-light max-w-5xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.4, delay: 0.5 }}
+            className="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.95] font-light max-w-5xl"
+          >
             Escape Into <em className="text-shimmer not-italic">Nature</em>
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }} className="mt-8 max-w-xl text-lg md:text-xl text-foreground/85 font-light">
-            Experience the cinematic luxury of Nakshatra Retreat — where ancient forests, starlit skies, and timeless hospitality awaken the soul.
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="mt-8 max-w-xl text-lg md:text-xl text-foreground/85 font-light"
+          >
+            Experience the cinematic luxury of Nakshatra Retreat — where ancient forests, starlit
+            skies, and timeless hospitality awaken the soul.
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.3 }} className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a href="#contact" className="btn-gold">Reserve Your Stay <ArrowRight size={14} /></a>
-            <a href="#gallery" className="btn-outline-gold">Explore Gallery</a>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.3 }}
+            className="mt-10 flex flex-wrap gap-4 justify-center"
+          >
+            <a href="#contact" className="btn-gold">
+              Reserve Your Stay <ArrowRight size={14} />
+            </a>
+            <a href="#gallery" className="btn-outline-gold">
+              Explore Gallery
+            </a>
           </motion.div>
         </div>
 
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }} className="absolute bottom-10 left-1/2 -translate-x-1/2 text-foreground/60 text-xs tracking-[0.4em] uppercase animate-float">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-foreground/60 text-xs tracking-[0.4em] uppercase animate-float"
+        >
           Scroll to discover
         </motion.div>
       </section>
@@ -121,11 +192,13 @@ function Home() {
         <Reveal>
           <div className="luxe-divider mb-8 text-xs tracking-[0.4em]">SINCE 2010</div>
           <h2 className="font-serif text-4xl md:text-6xl leading-tight">
-            A sanctuary written by the <span className="text-gradient-gold italic">stars</span>,<br />
+            A sanctuary written by the <span className="text-gradient-gold italic">stars</span>,
+            <br />
             built by the forest.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Tucked into a hidden valley of the Western Ghats, Nakshatra Retreat is more than a destination — it is a return. To stillness. To wonder. To yourself.
+            Tucked into a hidden valley of the Western Ghats, Nakshatra Retreat is more than a
+            destination — it is a return. To stillness. To wonder. To yourself.
           </p>
         </Reveal>
       </section>
@@ -157,11 +230,16 @@ function Home() {
         <Reveal>
           <div className="luxe-divider mb-6 text-xs tracking-[0.4em]">PHILOSOPHY</div>
           <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-8">
-            "We did not build a resort.<br />
-            <span className="italic text-gradient-gold">We listened to a forest, and it told us where to sleep."</span>
+            "We did not build a resort.
+            <br />
+            <span className="italic text-gradient-gold">
+              We listened to a forest, and it told us where to sleep."
+            </span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Every villa rests on stilts above the forest floor — no tree was felled in our making. Our staff are children of these hills. Our food, the harvest of our soil. Our luxury, the privilege of leaving no trace.
+            Every villa rests on stilts above the forest floor — no tree was felled in our making.
+            Our staff are children of these hills. Our food, the harvest of our soil. Our luxury,
+            the privilege of leaving no trace.
           </p>
         </Reveal>
       </section>
@@ -172,7 +250,9 @@ function Home() {
             <div className="text-center mb-16">
               <div className="eyebrow mb-4">Explore Around</div>
               <h2 className="font-serif text-4xl md:text-5xl">Nearby Attractions</h2>
-              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">Curated escapes within a short drive of the retreat.</p>
+              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+                Curated escapes within a short drive of the retreat.
+              </p>
             </div>
           </Reveal>
           <div className="space-y-12">
@@ -194,16 +274,24 @@ function Home() {
       {/* PARALLAX QUOTE */}
       <section className="relative py-40 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={nature} alt="Misty forest at sunrise" loading="lazy" className="w-full h-full object-cover" />
+          <img
+            src={nature}
+            alt="Misty forest at sunrise"
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-[oklch(0.10_0.02_150)]/75" />
         </div>
         <div className="relative max-w-4xl mx-auto text-center px-6">
           <Reveal>
             <Quote className="mx-auto text-gold mb-8" size={36} />
             <p className="font-serif text-3xl md:text-5xl italic leading-tight font-light">
-              "We do not inherit the earth from our ancestors — we borrow it from our children. Nakshatra returns it to them, untouched."
+              "We do not inherit the earth from our ancestors — we borrow it from our children.
+              Nakshatra returns it to them, untouched."
             </p>
-            <div className="luxe-divider mt-10 text-xs tracking-[0.4em]">A WHISPER FROM THE FOREST</div>
+            <div className="luxe-divider mt-10 text-xs tracking-[0.4em]">
+              A WHISPER FROM THE FOREST
+            </div>
           </Reveal>
         </div>
       </section>
@@ -215,7 +303,10 @@ function Home() {
             <div className="text-center mb-16">
               <div className="eyebrow mb-4">Wellness & Adventure</div>
               <h2 className="font-serif text-4xl md:text-6xl">Awaken every sense</h2>
-              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">From quiet hours in our spa to roaring nights around the campfire — a rhythm for every traveler.</p>
+              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+                From quiet hours in our spa to roaring nights around the campfire — a rhythm for
+                every traveler.
+              </p>
             </div>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
@@ -239,14 +330,22 @@ function Home() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="img-zoom rounded-2xl">
-              <img src={dining} alt="Candlelight forest dining" loading="lazy" className="w-full aspect-[4/5] object-cover" />
+              <img
+                src={dining}
+                alt="Candlelight forest dining"
+                loading="lazy"
+                className="w-full aspect-[4/5] object-cover"
+              />
             </div>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="eyebrow mb-4">Cuisine</div>
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">Dining beneath a canopy of stars</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-6">
+              Dining beneath a canopy of stars
+            </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Our chefs forage from the very forest you'll fall asleep to. Hand-foraged spices, slow-roasted heritage grains, and an ever-changing menu shaped by the seasons.
+              Our chefs forage from the very forest you'll fall asleep to. Hand-foraged spices,
+              slow-roasted heritage grains, and an ever-changing menu shaped by the seasons.
             </p>
           </Reveal>
         </div>
@@ -283,8 +382,16 @@ function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3 md:gap-4">
             {filtered.map((p, i) => (
               <Reveal key={i} delay={(i % 4) * 0.05} className={p.aspect ?? ""}>
-                <button onClick={() => setOpen(p.src)} className="img-zoom rounded-xl block w-full h-full">
-                  <img src={p.src} alt={p.cat} loading="lazy" className="w-full h-full object-cover" />
+                <button
+                  onClick={() => setOpen(p.src)}
+                  className="img-zoom rounded-xl block w-full h-full"
+                >
+                  <img
+                    src={p.src}
+                    alt={p.cat}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
                 </button>
               </Reveal>
             ))}
@@ -303,19 +410,37 @@ function Home() {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { q: "An experience that rearranged my idea of luxury. Every detail whispered care.", n: "Anaya & Dev", r: "Honeymoon Suite" },
-              { q: "I came to disconnect. I left rewired. The forest, the food, the stillness — unforgettable.", n: "Marcus T.", r: "Pool Villa Guest" },
-              { q: "From the welcome to the farewell — pure cinema. Already planning our return.", n: "The Reddy Family", r: "Family Suite" },
+              {
+                q: "An experience that rearranged my idea of luxury. Every detail whispered care.",
+                n: "Anaya & Dev",
+                r: "Honeymoon Suite",
+              },
+              {
+                q: "I came to disconnect. I left rewired. The forest, the food, the stillness — unforgettable.",
+                n: "Marcus T.",
+                r: "Pool Villa Guest",
+              },
+              {
+                q: "From the welcome to the farewell — pure cinema. Already planning our return.",
+                n: "The Reddy Family",
+                r: "Family Suite",
+              },
             ].map((t, i) => (
               <Reveal key={t.n} delay={i * 0.1}>
                 <div className="glass p-8 rounded-2xl h-full hover-lift">
                   <div className="flex gap-1 text-gold mb-4">
-                    {[...Array(5)].map((_, j) => <Star key={j} size={14} fill="currentColor" />)}
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} size={14} fill="currentColor" />
+                    ))}
                   </div>
-                  <p className="font-serif italic text-lg leading-relaxed text-foreground/90 mb-6">"{t.q}"</p>
+                  <p className="font-serif italic text-lg leading-relaxed text-foreground/90 mb-6">
+                    "{t.q}"
+                  </p>
                   <div>
                     <div className="text-sm text-foreground">{t.n}</div>
-                    <div className="text-xs text-muted-foreground tracking-wider uppercase mt-1">{t.r}</div>
+                    <div className="text-xs text-muted-foreground tracking-wider uppercase mt-1">
+                      {t.r}
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -331,7 +456,9 @@ function Home() {
             <div className="text-center mb-16">
               <div className="eyebrow mb-4">Plan Your Escape</div>
               <h2 className="font-serif text-4xl md:text-6xl">The forest is waiting</h2>
-              <p className="mt-4 text-muted-foreground">Tell us your dream stay and our concierge will reply within four hours.</p>
+              <p className="mt-4 text-muted-foreground">
+                Tell us your dream stay and our concierge will reply within four hours.
+              </p>
             </div>
           </Reveal>
 
@@ -347,19 +474,53 @@ function Home() {
                   <p className="text-muted-foreground">Our concierge will reach you shortly.</p>
                 </div>
               ) : (
-                <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-5">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setSent(true);
+                  }}
+                  className="space-y-5"
+                >
                   <div className="grid grid-cols-2 gap-4">
-                    <input required placeholder="First name" className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition" />
-                    <input required placeholder="Last name" className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition" />
+                    <input
+                      required
+                      placeholder="First name"
+                      className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition"
+                    />
+                    <input
+                      required
+                      placeholder="Last name"
+                      className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition"
+                    />
                   </div>
-                  <input required type="email" placeholder="Email" className="w-full bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition" />
-                  <input placeholder="Phone (optional)" className="w-full bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition" />
+                  <input
+                    required
+                    type="email"
+                    placeholder="Email"
+                    className="w-full bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition"
+                  />
+                  <input
+                    placeholder="Phone (optional)"
+                    className="w-full bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition"
+                  />
                   <div className="grid grid-cols-2 gap-4">
-                    <input type="date" className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition text-foreground/80" />
-                    <input type="date" className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition text-foreground/80" />
+                    <input
+                      type="date"
+                      className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition text-foreground/80"
+                    />
+                    <input
+                      type="date"
+                      className="bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition text-foreground/80"
+                    />
                   </div>
-                  <textarea rows={4} placeholder="Tell us about your dream stay..." className="w-full bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition resize-none" />
-                  <button type="submit" className="btn-gold">Send Inquiry</button>
+                  <textarea
+                    rows={4}
+                    placeholder="Tell us about your dream stay..."
+                    className="w-full bg-transparent border border-border rounded-lg px-4 py-3 focus:border-gold outline-none transition resize-none"
+                  />
+                  <button type="submit" className="btn-gold">
+                    Send Inquiry
+                  </button>
                 </form>
               )}
             </Reveal>
@@ -385,7 +546,6 @@ function Home() {
                   </div>
                 ))}
               </div>
-
             </Reveal>
           </div>
         </div>
@@ -394,7 +554,12 @@ function Home() {
       {/* CTA */}
       <section className="relative py-40 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={about} alt="Aerial view of resort" loading="lazy" className="w-full h-full object-cover" />
+          <img
+            src={about}
+            alt="Aerial view of resort"
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-[oklch(0.10_0.02_150)]/80" />
         </div>
         <div className="relative max-w-3xl mx-auto text-center">
@@ -404,14 +569,19 @@ function Home() {
             <p className="text-lg text-foreground/80 mb-10">
               The forest is waiting. So is your suite, your morning chai, your second breath.
             </p>
-            <a href="#contact" className="btn-gold">Reserve Your Escape <ArrowRight size={14} /></a>
+            <a href="#contact" className="btn-gold">
+              Reserve Your Escape <ArrowRight size={14} />
+            </a>
           </Reveal>
         </div>
       </section>
 
       {/* Lightbox */}
       {open && (
-        <div onClick={() => setOpen(null)} className="fixed inset-0 z-[80] bg-[oklch(0.08_0.02_150)]/95 backdrop-blur-md flex items-center justify-center p-6 cursor-zoom-out animate-in fade-in">
+        <div
+          onClick={() => setOpen(null)}
+          className="fixed inset-0 z-[80] bg-[oklch(0.08_0.02_150)]/95 backdrop-blur-md flex items-center justify-center p-6 cursor-zoom-out animate-in fade-in"
+        >
           <img src={open} alt="Preview" className="max-h-full max-w-full rounded-xl shadow-2xl" />
         </div>
       )}
